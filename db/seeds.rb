@@ -6,4 +6,4 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Url.create!(target_url: "www.google.ca", short_url: "a4FdZD")
+Url.create!(target_url: "http://www.google.ca", short_url: "a4FdZD")

@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 20160114210345) do
 
   create_table "total_clicks", force: :cascade do |t|
     t.integer  "url_id"
-    t.integer  "count"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "count",      default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "urls", force: :cascade do |t|
