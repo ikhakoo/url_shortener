@@ -5,4 +5,5 @@ Rails.application.routes.draw do
       resources :urls, :only => [:create, :update, :destroy, :index, :show]
     end
   end
+  get ':short_url', to: 'urls#go', as: 'go_router'
 end
