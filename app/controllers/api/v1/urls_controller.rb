@@ -1,6 +1,5 @@
 class Api::V1::UrlsController < ApplicationController
 	before_action :set_url, only: [:show]
-  before_filter :restrict_access
       
   def index
     @urls = Url.all
@@ -16,7 +15,7 @@ class Api::V1::UrlsController < ApplicationController
     @url = Url.new(url_params)
 
     if @url.save
-      render json: @url, status: :created, location: @url
+      render json: @url, status: :created
     else
       render json: @url.errors, status: :unprocessable_entity
     end
@@ -48,4 +47,5 @@ class Api::V1::UrlsController < ApplicationController
     def url_params
       params.require(:url).permit(:target_url, :short_url)
     end
+
 end
